@@ -1,0 +1,24 @@
+diff --git a/net/minecraft/entity/EntityAreaEffectCloud.java b/net/minecraft/entity/EntityAreaEffectCloud.java
+index 279a3b8..eae4fbb 100644
+--- a/net/minecraft/entity/EntityAreaEffectCloud.java
++++ b/net/minecraft/entity/EntityAreaEffectCloud.java
+@@ -251,7 +251,7 @@
+                }
+             }
+ 
+-            ArrayList var18 = Lists.newArrayList();
++            ArrayList<PotionEffect> var18 = Lists.newArrayList();
+ 
+             for(PotionEffect var24 : this.potion.getEffects()) {
+                var18.add(new PotionEffect(var24.getPotion(), var24.getDuration() / 4, var24.getAmplifier(), var24.getIsAmbient(), var24.doesShowParticles()));
+@@ -261,7 +261,9 @@
+             if(var18.isEmpty()) {
+                this.reapplicationDelayMap.clear();
+             } else {
+-               List var22 = this.world.getEntitiesWithinAABB(EntityLivingBase.class, this.getEntityBoundingBox());
++               List<EntityLivingBase> var22 = this.world.getEntitiesWithinAABB(EntityLivingBase.class,
++                       this
++                       .getEntityBoundingBox());
+                if(!var22.isEmpty()) {
+                   for(EntityLivingBase var27 : var22) {
+                      if(!this.reapplicationDelayMap.containsKey(var27) && var27.canBeHitWithPotion()) {

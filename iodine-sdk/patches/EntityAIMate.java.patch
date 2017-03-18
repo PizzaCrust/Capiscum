@@ -1,0 +1,14 @@
+diff --git a/net/minecraft/entity/ai/EntityAIMate.java b/net/minecraft/entity/ai/EntityAIMate.java
+index d020ebc..dd37ea0 100644
+--- a/net/minecraft/entity/ai/EntityAIMate.java
++++ b/net/minecraft/entity/ai/EntityAIMate.java
+@@ -62,7 +62,8 @@
+    }
+ 
+    private EntityAnimal getNearbyMate() {
+-      List var1 = this.world.getEntitiesWithinAABB(this.mateClass, this.theAnimal.getEntityBoundingBox().expandXyz(8.0D));
++      List<EntityAnimal> var1 = this.world.getEntitiesWithinAABB(this.mateClass, this.theAnimal
++              .getEntityBoundingBox().expandXyz(8.0D));
+       double var2 = Double.MAX_VALUE;
+       EntityAnimal var4 = null;
+ 

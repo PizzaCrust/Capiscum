@@ -1,0 +1,13 @@
+diff --git a/net/minecraft/entity/passive/EntityLlama.java b/net/minecraft/entity/passive/EntityLlama.java
+index 3a1f5b5..033811a 100644
+--- a/net/minecraft/entity/passive/EntityLlama.java
++++ b/net/minecraft/entity/passive/EntityLlama.java
+@@ -419,7 +419,7 @@
+ 
+    static class AIDefendTarget extends EntityAINearestAttackableTarget<EntityWolf> {
+       public AIDefendTarget(EntityLlama var1) {
+-         super(var1, EntityWolf.class, 16, false, true, (Predicate<? super T>)null);
++         super(var1, EntityWolf.class, 16, false, true, null);
+       }
+ 
+       public boolean shouldExecute() {

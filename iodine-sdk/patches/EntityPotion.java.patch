@@ -1,0 +1,13 @@
+diff --git a/net/minecraft/entity/projectile/EntityPotion.java b/net/minecraft/entity/projectile/EntityPotion.java
+index 44b6a56..4ba0517 100644
+--- a/net/minecraft/entity/projectile/EntityPotion.java
++++ b/net/minecraft/entity/projectile/EntityPotion.java
+@@ -131,7 +131,7 @@
+ 
+    private void applySplash(RayTraceResult var1, List<PotionEffect> var2) {
+       AxisAlignedBB var3 = this.getEntityBoundingBox().expand(4.0D, 2.0D, 4.0D);
+-      List var4 = this.world.getEntitiesWithinAABB(EntityLivingBase.class, var3);
++      List<EntityLivingBase> var4 = this.world.getEntitiesWithinAABB(EntityLivingBase.class, var3);
+       if(!var4.isEmpty()) {
+          for(EntityLivingBase var6 : var4) {
+             if(var6.canBeHitWithPotion()) {

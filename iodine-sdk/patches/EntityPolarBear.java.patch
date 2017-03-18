@@ -1,0 +1,13 @@
+diff --git a/net/minecraft/entity/monster/EntityPolarBear.java b/net/minecraft/entity/monster/EntityPolarBear.java
+index 9f33572..3707738 100644
+--- a/net/minecraft/entity/monster/EntityPolarBear.java
++++ b/net/minecraft/entity/monster/EntityPolarBear.java
+@@ -163,7 +163,7 @@
+ 
+    class AIAttackPlayer extends EntityAINearestAttackableTarget<EntityPlayer> {
+       public AIAttackPlayer() {
+-         super(EntityPolarBear.this, EntityPlayer.class, 20, true, true, (Predicate<? super T>)null);
++         super(EntityPolarBear.this, EntityPlayer.class, 20, true, true, null);
+       }
+ 
+       public boolean shouldExecute() {

@@ -1,0 +1,13 @@
+diff --git a/net/minecraft/block/state/BlockStateBase.java b/net/minecraft/block/state/BlockStateBase.java
+index ead7331..163f129 100644
+--- a/net/minecraft/block/state/BlockStateBase.java
++++ b/net/minecraft/block/state/BlockStateBase.java
+@@ -25,7 +25,7 @@
+       }
+ 
+       private <T extends Comparable<T>> String getPropertyName(IProperty<T> var1, Comparable<?> var2) {
+-         return var1.getName(var2);
++         return var1.getName((T)var2);
+       }
+    };
+ 

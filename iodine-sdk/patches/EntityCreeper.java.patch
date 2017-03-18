@@ -1,0 +1,13 @@
+diff --git a/net/minecraft/entity/monster/EntityCreeper.java b/net/minecraft/entity/monster/EntityCreeper.java
+index fe2c840..fadf1fe 100644
+--- a/net/minecraft/entity/monster/EntityCreeper.java
++++ b/net/minecraft/entity/monster/EntityCreeper.java
+@@ -225,7 +225,7 @@
+    }
+ 
+    private void spawnLingeringCloud() {
+-      Collection var1 = this.getActivePotionEffects();
++      Collection<PotionEffect> var1 = this.getActivePotionEffects();
+       if(!var1.isEmpty()) {
+          EntityAreaEffectCloud var2 = new EntityAreaEffectCloud(this.world, this.posX, this.posY, this.posZ);
+          var2.setRadius(2.5F);

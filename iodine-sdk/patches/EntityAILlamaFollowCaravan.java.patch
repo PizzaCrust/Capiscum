@@ -1,0 +1,15 @@
+diff --git a/net/minecraft/entity/ai/EntityAILlamaFollowCaravan.java b/net/minecraft/entity/ai/EntityAILlamaFollowCaravan.java
+index b0a6516..d1a7b16 100644
+--- a/net/minecraft/entity/ai/EntityAILlamaFollowCaravan.java
++++ b/net/minecraft/entity/ai/EntityAILlamaFollowCaravan.java
+@@ -18,7 +18,9 @@
+ 
+    public boolean shouldExecute() {
+       if(!this.llama.getLeashed() && !this.llama.inCaravan()) {
+-         List var1 = this.llama.world.getEntitiesWithinAABB(this.llama.getClass(), this.llama.getEntityBoundingBox().expand(9.0D, 4.0D, 9.0D));
++         List<EntityLlama> var1 = this.llama.world.getEntitiesWithinAABB(this.llama.getClass(), this
++                 .llama
++                 .getEntityBoundingBox().expand(9.0D, 4.0D, 9.0D));
+          EntityLlama var2 = null;
+          double var3 = Double.MAX_VALUE;
+ 

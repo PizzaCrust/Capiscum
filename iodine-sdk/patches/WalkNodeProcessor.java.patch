@@ -1,0 +1,13 @@
+diff --git a/net/minecraft/pathfinding/WalkNodeProcessor.java b/net/minecraft/pathfinding/WalkNodeProcessor.java
+index 6cd9606..3f3a109 100644
+--- a/net/minecraft/pathfinding/WalkNodeProcessor.java
++++ b/net/minecraft/pathfinding/WalkNodeProcessor.java
+@@ -63,7 +63,7 @@
+       BlockPos var9 = new BlockPos(this.entity);
+       PathNodeType var10 = this.getPathNodeType(this.entity, var9.getX(), var1, var9.getZ());
+       if(this.entity.getPathPriority(var10) < 0.0F) {
+-         HashSet var4 = Sets.newHashSet();
++         HashSet<BlockPos> var4 = Sets.newHashSet();
+          var4.add(new BlockPos(this.entity.getEntityBoundingBox().minX, (double)var1, this.entity.getEntityBoundingBox().minZ));
+          var4.add(new BlockPos(this.entity.getEntityBoundingBox().minX, (double)var1, this.entity.getEntityBoundingBox().maxZ));
+          var4.add(new BlockPos(this.entity.getEntityBoundingBox().maxX, (double)var1, this.entity.getEntityBoundingBox().minZ));

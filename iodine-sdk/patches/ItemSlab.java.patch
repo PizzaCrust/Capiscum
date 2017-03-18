@@ -1,0 +1,12 @@
+diff --git a/net/minecraft/item/ItemSlab.java b/net/minecraft/item/ItemSlab.java
+index b295982..c008c9a 100644
+--- a/net/minecraft/item/ItemSlab.java
++++ b/net/minecraft/item/ItemSlab.java
+@@ -85,6 +85,6 @@
+    }
+ 
+    protected <T extends Comparable<T>> IBlockState makeState(IProperty<T> var1, Comparable<?> var2) {
+-      return this.doubleSlab.getDefaultState().withProperty(var1, var2);
++      return this.doubleSlab.getDefaultState().withProperty(var1, (T) var2);
+    }
+ }

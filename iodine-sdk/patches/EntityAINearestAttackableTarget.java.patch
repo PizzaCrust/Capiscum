@@ -1,0 +1,38 @@
+diff --git a/net/minecraft/entity/ai/EntityAINearestAttackableTarget.java b/net/minecraft/entity/ai/EntityAINearestAttackableTarget.java
+index 3950469..7faf55b 100644
+--- a/net/minecraft/entity/ai/EntityAINearestAttackableTarget.java
++++ b/net/minecraft/entity/ai/EntityAINearestAttackableTarget.java
+@@ -25,7 +25,7 @@
+    protected final Class<T> targetClass;
+    private final int targetChance;
+    protected final EntityAINearestAttackableTarget.Sorter theNearestAttackableTargetSorter;
+-   protected final Predicate<? super T> targetEntitySelector;
++   protected final Predicate<T> targetEntitySelector;
+    protected T targetEntity;
+ 
+    public EntityAINearestAttackableTarget(EntityCreature var1, Class<T> var2, boolean var3) {
+@@ -58,11 +58,13 @@
+             return false;
+          } else {
+             Collections.sort(var1, this.theNearestAttackableTargetSorter);
+-            this.targetEntity = (EntityLivingBase)var1.get(0);
++            this.targetEntity = (T)var1.get(0);
+             return true;
+          }
+       } else {
+-         this.targetEntity = this.taskOwner.world.getNearestAttackablePlayer(this.taskOwner.posX, this.taskOwner.posY + (double)this.taskOwner.getEyeHeight(), this.taskOwner.posZ, this.getTargetDistance(), this.getTargetDistance(), new Function<EntityPlayer, Double>() {
++         Predicate<EntityPlayer> playerPredicate = (Predicate<EntityPlayer>) this
++                 .targetEntitySelector;
++         this.targetEntity = (T) this.taskOwner.world.getNearestAttackablePlayer(this.taskOwner.posX, this.taskOwner.posY + (double)this.taskOwner.getEyeHeight(), this.taskOwner.posZ, this.getTargetDistance(), this.getTargetDistance(), new Function<EntityPlayer, Double>() {
+             @Nullable
+             public Double apply(@Nullable EntityPlayer var1) {
+                ItemStack var2 = var1.getItemStackFromSlot(EntityEquipmentSlot.HEAD);
+@@ -78,7 +80,7 @@
+ 
+                return Double.valueOf(1.0D);
+             }
+-         }, this.targetEntitySelector);
++         }, playerPredicate);
+          return this.targetEntity != null;
+       }
+    }

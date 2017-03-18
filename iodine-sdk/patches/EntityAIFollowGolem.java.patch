@@ -1,0 +1,15 @@
+diff --git a/net/minecraft/entity/ai/EntityAIFollowGolem.java b/net/minecraft/entity/ai/EntityAIFollowGolem.java
+index ef853e3..5621b58 100644
+--- a/net/minecraft/entity/ai/EntityAIFollowGolem.java
++++ b/net/minecraft/entity/ai/EntityAIFollowGolem.java
+@@ -22,7 +22,9 @@
+       } else if(!this.theVillager.world.isDaytime()) {
+          return false;
+       } else {
+-         List var1 = this.theVillager.world.getEntitiesWithinAABB(EntityIronGolem.class, this.theVillager.getEntityBoundingBox().expand(6.0D, 2.0D, 6.0D));
++         List<EntityIronGolem> var1 = this.theVillager.world.getEntitiesWithinAABB(EntityIronGolem
++                 .class, this
++                 .theVillager.getEntityBoundingBox().expand(6.0D, 2.0D, 6.0D));
+          if(var1.isEmpty()) {
+             return false;
+          } else {

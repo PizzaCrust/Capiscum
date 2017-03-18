@@ -1,0 +1,35 @@
+diff --git a/net/minecraft/command/EntitySelector.java b/net/minecraft/command/EntitySelector.java
+index 473f272..c1620f1 100644
+--- a/net/minecraft/command/EntitySelector.java
++++ b/net/minecraft/command/EntitySelector.java
+@@ -335,16 +335,17 @@
+ 
+    private static List<Predicate<Entity>> getTagPredicates(Map<String, String> var0) {
+       ArrayList var1 = Lists.newArrayList();
+-      final String var2 = getArgument(var0, ARGUMENT_ENTITY_TAG);
+-      final boolean var3 = var2 != null && var2.startsWith("!");
++      String[] var2 = new String [] { getArgument(var0, ARGUMENT_ENTITY_TAG) };
++      final boolean var3 = var2[0] != null && var2[0].startsWith("!");
+       if(var3) {
+-         var2 = var2.substring(1);
++         var2[0] = var2[0].substring(1);
+       }
+ 
+       if(var2 != null) {
+          var1.add(new Predicate<Entity>() {
+             public boolean apply(@Nullable Entity var1) {
+-               return var1 == null?false:("".equals(var2)?var1.getTags().isEmpty() != var3:var1.getTags().contains(var2) != var3);
++               return var1 == null?false:("".equals(var2[0])?var1.getTags().isEmpty() !=
++                       var3:var1.getTags().contains(var2[0]) != var3);
+             }
+          });
+       }
+@@ -472,7 +473,7 @@
+ 
+       Entity var7 = var2.getCommandSenderEntity();
+       if(var7 != null && var3.isAssignableFrom(var7.getClass()) && var6 == 1 && ((List)var0).contains(var7) && !"r".equals(var4)) {
+-         var0 = Lists.newArrayList(new Entity[]{var7});
++         var0 = (List<T>)Lists.newArrayList(new Entity[]{var7});
+       }
+ 
+       if(var6 != 0) {

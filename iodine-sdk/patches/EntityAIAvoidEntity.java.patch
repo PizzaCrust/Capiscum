@@ -1,0 +1,13 @@
+diff --git a/net/minecraft/entity/ai/EntityAIAvoidEntity.java b/net/minecraft/entity/ai/EntityAIAvoidEntity.java
+index e2bc9a6..9cdf16f 100644
+--- a/net/minecraft/entity/ai/EntityAIAvoidEntity.java
++++ b/net/minecraft/entity/ai/EntityAIAvoidEntity.java
+@@ -50,7 +50,7 @@
+       if(var1.isEmpty()) {
+          return false;
+       } else {
+-         this.closestLivingEntity = (Entity)var1.get(0);
++         this.closestLivingEntity = (T)var1.get(0);
+          Vec3d var2 = RandomPositionGenerator.findRandomTargetBlockAwayFrom(this.theEntity, 16, 7, new Vec3d(this.closestLivingEntity.posX, this.closestLivingEntity.posY, this.closestLivingEntity.posZ));
+          if(var2 == null) {
+             return false;

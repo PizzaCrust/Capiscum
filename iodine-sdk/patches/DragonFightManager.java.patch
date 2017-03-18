@@ -1,0 +1,21 @@
+diff --git a/net/minecraft/world/end/DragonFightManager.java b/net/minecraft/world/end/DragonFightManager.java
+index 56c3aff..006bffc 100644
+--- a/net/minecraft/world/end/DragonFightManager.java
++++ b/net/minecraft/world/end/DragonFightManager.java
+@@ -283,14 +283,14 @@
+    }
+ 
+    private void updateplayers() {
+-      HashSet var1 = Sets.newHashSet();
++      HashSet<EntityPlayerMP> var1 = Sets.newHashSet();
+ 
+       for(EntityPlayerMP var3 : this.world.getPlayers(EntityPlayerMP.class, VALID_PLAYER)) {
+          this.bossInfo.addPlayer(var3);
+          var1.add(var3);
+       }
+ 
+-      HashSet var5 = Sets.newHashSet(this.bossInfo.getPlayers());
++      HashSet<EntityPlayerMP> var5 = Sets.newHashSet(this.bossInfo.getPlayers());
+       var5.removeAll(var1);
+ 
+       for(EntityPlayerMP var4 : var5) {

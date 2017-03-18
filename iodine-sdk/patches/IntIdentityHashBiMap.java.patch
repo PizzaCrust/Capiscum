@@ -1,0 +1,16 @@
+diff --git a/net/minecraft/util/IntIdentityHashBiMap.java b/net/minecraft/util/IntIdentityHashBiMap.java
+index 0761d9e..f35a618 100644
+--- a/net/minecraft/util/IntIdentityHashBiMap.java
++++ b/net/minecraft/util/IntIdentityHashBiMap.java
+@@ -17,9 +17,9 @@
+ 
+    public IntIdentityHashBiMap(int var1) {
+       var1 = (int)((float)var1 / 0.8F);
+-      this.values = (Object[])(new Object[var1]);
++      this.values = (K[])(new Object[var1]);
+       this.intKeys = new int[var1];
+-      this.byId = (Object[])(new Object[var1]);
++      this.byId = (K[])(new Object[var1]);
+    }
+ 
+    public int getId(@Nullable K var1) {

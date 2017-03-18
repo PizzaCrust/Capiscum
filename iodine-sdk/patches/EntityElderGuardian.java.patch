@@ -1,0 +1,14 @@
+diff --git a/net/minecraft/entity/monster/EntityElderGuardian.java b/net/minecraft/entity/monster/EntityElderGuardian.java
+index 6f0149d..be8f9cf 100644
+--- a/net/minecraft/entity/monster/EntityElderGuardian.java
++++ b/net/minecraft/entity/monster/EntityElderGuardian.java
+@@ -71,7 +71,8 @@
+       boolean var1 = true;
+       if((this.ticksExisted + this.getEntityId()) % 1200 == 0) {
+          Potion var2 = MobEffects.MINING_FATIGUE;
+-         List var3 = this.world.getPlayers(EntityPlayerMP.class, new Predicate<EntityPlayerMP>() {
++         List<EntityPlayerMP> var3 = this.world.getPlayers(EntityPlayerMP.class, new Predicate<EntityPlayerMP>
++                 () {
+             public boolean apply(@Nullable EntityPlayerMP var1) {
+                return EntityElderGuardian.this.getDistanceSqToEntity(var1) < 2500.0D && var1.interactionManager.survivalOrAdventure();
+             }
