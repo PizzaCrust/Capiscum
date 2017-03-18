@@ -20,7 +20,7 @@ dependencies {
 task setupIodine(type: Exec) {
     group = 'iodine'
     commandLine 'java', '-jar', "buildtools/iodine.jar", '--reltype', mappingsType, '--mcv',
-            minecraftVersion, '--mpv', mappingsVersion
+            minecraftVersion, '--mpv', mappingsVersion, '--jsrg', 'buildtools/joined.srg'
 }
 
 task genPatches(type: Exec) {
