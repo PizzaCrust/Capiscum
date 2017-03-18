@@ -12,6 +12,11 @@
 !README.md
 !LICENSE.txt
 !/buildtools/
-!/iodine-sdk/patches/
+!/iodine-sdk/
+/iodine-sdk/src
+/iodine-sdk/settings.gradle
+/iodine-sdk/pom.xml
+/iodine-sdk/bin
+/iodine-sdk/build.gradle
 !/.gitignore
 !/settings.gradle
