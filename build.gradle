@@ -14,7 +14,7 @@ repositories {
 }
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.11'
+    compile project(':iodine-sdk')
 }
 
 task setupIodine(type: Exec) {
@@ -31,4 +31,8 @@ task genPatches(type: Exec) {
 task applyPatches(type: Exec) {
     group = 'iodine'
     commandLine 'java', 'jar', "buildtools/iodine.jar", "--apatch"
+}
+
+project(":iodine-sdk") {
+    apply from: rootProject.file('iodine-sdk/build.gradle')
 }

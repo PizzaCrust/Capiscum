@@ -14,3 +14,4 @@
 !/buildtools/
 !/iodine-sdk/patches/
 !/.gitignore
+!/settings.gradle
