@@ -1,0 +1,13 @@
+diff --git a/net/minecraft/profiler/Snooper.java b/net/minecraft/profiler/Snooper.java
+index 7b76b78..0e524b6 100644
+--- a/net/minecraft/profiler/Snooper.java
++++ b/net/minecraft/profiler/Snooper.java
+@@ -78,7 +78,7 @@
+ 
+    private void addJvmArgsToSnooper() {
+       RuntimeMXBean var1 = ManagementFactory.getRuntimeMXBean();
+-      List var2 = var1.getInputArguments();
++      List<String> var2 = var1.getInputArguments();
+       int var3 = 0;
+ 
+       for(String var5 : var2) {

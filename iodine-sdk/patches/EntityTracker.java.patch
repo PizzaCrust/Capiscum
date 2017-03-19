@@ -1,0 +1,15 @@
+diff --git a/net/minecraft/entity/EntityTracker.java b/net/minecraft/entity/EntityTracker.java
+index a195d01..69b22ea 100644
+--- a/net/minecraft/entity/EntityTracker.java
++++ b/net/minecraft/entity/EntityTracker.java
+@@ -256,8 +256,8 @@
+    }
+ 
+    public void sendLeashedEntitiesInChunk(EntityPlayerMP var1, Chunk var2) {
+-      ArrayList var3 = Lists.newArrayList();
+-      ArrayList var4 = Lists.newArrayList();
++      ArrayList<Entity> var3 = Lists.newArrayList();
++      ArrayList<Entity> var4 = Lists.newArrayList();
+ 
+       for(EntityTrackerEntry var6 : this.entries) {
+          Entity var7 = var6.getTrackedEntity();

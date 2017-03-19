@@ -1,0 +1,13 @@
+diff --git a/net/minecraft/entity/monster/EntityWitch.java b/net/minecraft/entity/monster/EntityWitch.java
+index ee24241..f456b43 100644
+--- a/net/minecraft/entity/monster/EntityWitch.java
++++ b/net/minecraft/entity/monster/EntityWitch.java
+@@ -104,7 +104,7 @@
+                ItemStack var5 = this.getHeldItemMainhand();
+                this.setItemStackToSlot(EntityEquipmentSlot.MAINHAND, ItemStack.EMPTY);
+                if(var5.getItem() == Items.POTIONITEM) {
+-                  List var6 = PotionUtils.getEffectsFromStack(var5);
++                  List<PotionEffect> var6 = PotionUtils.getEffectsFromStack(var5);
+                   if(var6 != null) {
+                      for(PotionEffect var4 : var6) {
+                         this.addPotionEffect(new PotionEffect(var4));

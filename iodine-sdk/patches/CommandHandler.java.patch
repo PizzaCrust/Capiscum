@@ -1,0 +1,13 @@
+diff --git a/net/minecraft/command/CommandHandler.java b/net/minecraft/command/CommandHandler.java
+index abe424f..a9d6f5c 100644
+--- a/net/minecraft/command/CommandHandler.java
++++ b/net/minecraft/command/CommandHandler.java
+@@ -55,7 +55,7 @@
+             var1.sendMessage(var15);
+          } else if(var5.checkPermission(this.getServer(), var1)) {
+             if(var7 > -1) {
+-               List var16 = EntitySelector.matchEntities(var1, var3[var7], Entity.class);
++               List<Entity> var16 = EntitySelector.matchEntities(var1, var3[var7], Entity.class);
+                String var9 = var3[var7];
+                var1.setCommandStat(CommandResultStats.Type.AFFECTED_ENTITIES, var16.size());
+                if(var16.isEmpty()) {

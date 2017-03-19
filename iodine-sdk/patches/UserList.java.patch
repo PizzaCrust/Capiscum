@@ -1,0 +1,22 @@
+diff --git a/net/minecraft/server/management/UserList.java b/net/minecraft/server/management/UserList.java
+index cb40b8e..3fd4db2 100644
+--- a/net/minecraft/server/management/UserList.java
++++ b/net/minecraft/server/management/UserList.java
+@@ -149,7 +149,7 @@
+    }
+ 
+    public void readSavedFile() throws FileNotFoundException {
+-      Collection var1 = null;
++      Collection<UserListEntry> var1 = null;
+       BufferedReader var2 = null;
+ 
+       try {
+@@ -164,7 +164,7 @@
+ 
+          for(UserListEntry var4 : var1) {
+             if(var4.getValue() != null) {
+-               this.values.put(this.getObjectKey(var4.getValue()), var4);
++               this.values.put(this.getObjectKey((K) var4.getValue()), (V) var4);
+             }
+          }
+       }

@@ -1,0 +1,13 @@
+diff --git a/net/minecraft/block/properties/PropertyEnum.java b/net/minecraft/block/properties/PropertyEnum.java
+index 4324a45..4234d3a 100644
+--- a/net/minecraft/block/properties/PropertyEnum.java
++++ b/net/minecraft/block/properties/PropertyEnum.java
+@@ -26,7 +26,7 @@
+             throw new IllegalArgumentException("Multiple values have the same name \'" + var6 + "\'");
+          }
+ 
+-         this.nameToValue.put(var6, var5);
++         this.nameToValue.put(var6, (T) var5);
+       }
+ 
+    }

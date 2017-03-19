@@ -1,0 +1,13 @@
+diff --git a/net/minecraft/item/ItemMonsterPlacer.java b/net/minecraft/item/ItemMonsterPlacer.java
+index 163c9aa..20e0e08 100644
+--- a/net/minecraft/item/ItemMonsterPlacer.java
++++ b/net/minecraft/item/ItemMonsterPlacer.java
+@@ -94,7 +94,7 @@
+ 
+    protected double getYOffset(World var1, BlockPos var2) {
+       AxisAlignedBB var3 = (new AxisAlignedBB(var2)).addCoord(0.0D, -1.0D, 0.0D);
+-      List var4 = var1.getCollisionBoxes((Entity)null, var3);
++      List<AxisAlignedBB> var4 = var1.getCollisionBoxes((Entity)null, var3);
+       if(var4.isEmpty()) {
+          return 0.0D;
+       } else {

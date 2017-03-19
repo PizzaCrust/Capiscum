@@ -1,0 +1,13 @@
+diff --git a/net/minecraft/server/management/PlayerList.java b/net/minecraft/server/management/PlayerList.java
+index dd1afa1..667d844 100644
+--- a/net/minecraft/server/management/PlayerList.java
++++ b/net/minecraft/server/management/PlayerList.java
+@@ -360,7 +360,7 @@
+ 
+    public EntityPlayerMP createPlayerForUser(GameProfile var1) {
+       UUID var2 = EntityPlayer.getUUID(var1);
+-      ArrayList var3 = Lists.newArrayList();
++      ArrayList<EntityPlayerMP> var3 = Lists.newArrayList();
+ 
+       for(int var4 = 0; var4 < this.playerEntityList.size(); ++var4) {
+          EntityPlayerMP var5 = (EntityPlayerMP)this.playerEntityList.get(var4);

@@ -1,0 +1,22 @@
+diff --git a/net/minecraft/util/ClassInheritanceMultiMap.java b/net/minecraft/util/ClassInheritanceMultiMap.java
+index ca098d9..707f113 100644
+--- a/net/minecraft/util/ClassInheritanceMultiMap.java
++++ b/net/minecraft/util/ClassInheritanceMultiMap.java
+@@ -33,7 +33,7 @@
+ 
+       for(Object var3 : this.values) {
+          if(var1.isAssignableFrom(var3.getClass())) {
+-            this.addForClass(var3, var1);
++            this.addForClass((T)var3, var1);
+          }
+       }
+ 
+@@ -65,7 +65,7 @@
+    private void addForClass(T var1, Class<?> var2) {
+       List var3 = (List)this.map.get(var2);
+       if(var3 == null) {
+-         this.map.put(var2, Lists.newArrayList(new Object[]{var1}));
++         this.map.put(var2, Lists.newArrayList(var1));
+       } else {
+          var3.add(var1);
+       }

@@ -1,0 +1,13 @@
+diff --git a/net/minecraft/block/state/pattern/FactoryBlockPattern.java b/net/minecraft/block/state/pattern/FactoryBlockPattern.java
+index f5479a6..d6cb3af 100644
+--- a/net/minecraft/block/state/pattern/FactoryBlockPattern.java
++++ b/net/minecraft/block/state/pattern/FactoryBlockPattern.java
+@@ -43,7 +43,7 @@
+ 
+                for(char var9 : var5.toCharArray()) {
+                   if(!this.symbolMap.containsKey(Character.valueOf(var9))) {
+-                     this.symbolMap.put(Character.valueOf(var9), (Object)null);
++                     this.symbolMap.put(Character.valueOf(var9), null);
+                   }
+                }
+             }

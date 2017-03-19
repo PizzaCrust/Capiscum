@@ -1,5 +1,5 @@
 diff --git a/net/minecraft/util/IntIdentityHashBiMap.java b/net/minecraft/util/IntIdentityHashBiMap.java
-index 0761d9e..f35a618 100644
+index 0761d9e..3b01d46 100644
 --- a/net/minecraft/util/IntIdentityHashBiMap.java
 +++ b/net/minecraft/util/IntIdentityHashBiMap.java
 @@ -17,9 +17,9 @@
@@ -14,3 +14,22 @@ index 0761d9e..f35a618 100644
     }
  
     public int getId(@Nullable K var1) {
+@@ -52,15 +52,15 @@
+    private void grow(int var1) {
+       Object[] var2 = this.values;
+       int[] var3 = this.intKeys;
+-      this.values = (Object[])(new Object[var1]);
++      this.values = (K[])(new Object[var1]);
+       this.intKeys = new int[var1];
+-      this.byId = (Object[])(new Object[var1]);
++      this.byId = (K[])(new Object[var1]);
+       this.nextFreeIndex = 0;
+       this.mapSize = 0;
+ 
+       for(int var4 = 0; var4 < var2.length; ++var4) {
+          if(var2[var4] != null) {
+-            this.put(var2[var4], var3[var4]);
++            this.put((K) var2[var4], var3[var4]);
+          }
+       }
+ 

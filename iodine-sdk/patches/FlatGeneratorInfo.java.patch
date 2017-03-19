@@ -1,0 +1,20 @@
+diff --git a/net/minecraft/world/gen/FlatGeneratorInfo.java b/net/minecraft/world/gen/FlatGeneratorInfo.java
+index 9df1bbd..5194c45 100644
+--- a/net/minecraft/world/gen/FlatGeneratorInfo.java
++++ b/net/minecraft/world/gen/FlatGeneratorInfo.java
+@@ -70,13 +70,13 @@
+          var1.append(";");
+          int var9 = 0;
+ 
+-         for(Entry var4 : this.worldFeatures.entrySet()) {
++         for(Entry<String, Map<String, String>> var4 : this.worldFeatures.entrySet()) {
+             if(var9++ > 0) {
+                var1.append(",");
+             }
+ 
+             var1.append(((String)var4.getKey()).toLowerCase(Locale.ROOT));
+-            Map var5 = (Map)var4.getValue();
++            Map<String, String> var5 = var4.getValue();
+             if(!var5.isEmpty()) {
+                var1.append("(");
+                int var6 = 0;

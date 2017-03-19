@@ -1,0 +1,14 @@
+diff --git a/net/minecraft/entity/projectile/EntityFishHook.java b/net/minecraft/entity/projectile/EntityFishHook.java
+index a11d6f5..7562732 100644
+--- a/net/minecraft/entity/projectile/EntityFishHook.java
++++ b/net/minecraft/entity/projectile/EntityFishHook.java
+@@ -239,7 +239,8 @@
+       }
+ 
+       Entity var4 = null;
+-      List var5 = this.world.getEntitiesWithinAABBExcludingEntity(this, this.getEntityBoundingBox().addCoord(this.motionX, this.motionY, this.motionZ).expandXyz(1.0D));
++      List<Entity> var5 = this.world.getEntitiesWithinAABBExcludingEntity(this, this
++              .getEntityBoundingBox().addCoord(this.motionX, this.motionY, this.motionZ).expandXyz(1.0D));
+       double var6 = 0.0D;
+ 
+       for(Entity var9 : var5) {

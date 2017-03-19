@@ -1,0 +1,16 @@
+diff --git a/net/minecraft/util/datafix/walkers/Filtered.java b/net/minecraft/util/datafix/walkers/Filtered.java
+index 9d500cb..dfdf339 100644
+--- a/net/minecraft/util/datafix/walkers/Filtered.java
++++ b/net/minecraft/util/datafix/walkers/Filtered.java
+@@ -13,9 +13,9 @@
+ 
+    public Filtered(Class<?> var1) {
+       if(Entity.class.isAssignableFrom(var1)) {
+-         this.key = EntityList.getKey(var1);
++         this.key = EntityList.getKey((Class<? extends Entity>) var1);
+       } else if(TileEntity.class.isAssignableFrom(var1)) {
+-         this.key = TileEntity.getKey(var1);
++         this.key = TileEntity.getKey((Class<? extends TileEntity>) var1);
+       } else {
+          this.key = null;
+       }

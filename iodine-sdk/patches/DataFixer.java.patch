@@ -1,0 +1,13 @@
+diff --git a/net/minecraft/util/datafix/DataFixer.java b/net/minecraft/util/datafix/DataFixer.java
+index c8a4198..b22f8e0 100644
+--- a/net/minecraft/util/datafix/DataFixer.java
++++ b/net/minecraft/util/datafix/DataFixer.java
+@@ -92,7 +92,7 @@
+    }
+ 
+    private <V> List<V> getTypeList(Map<IFixType, List<V>> var1, IFixType var2) {
+-      Object var3 = (List)var1.get(var2);
++      List var3 = (List)var1.get(var2);
+       if(var3 == null) {
+          var3 = Lists.newArrayList();
+          var1.put(var2, var3);

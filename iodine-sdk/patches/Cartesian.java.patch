@@ -1,0 +1,13 @@
+diff --git a/net/minecraft/util/math/Cartesian.java b/net/minecraft/util/math/Cartesian.java
+index 833fcac..be5aca5 100644
+--- a/net/minecraft/util/math/Cartesian.java
++++ b/net/minecraft/util/math/Cartesian.java
+@@ -45,7 +45,7 @@
+       }
+ 
+       public List<T> apply(@Nullable Object[] var1) {
+-         return Arrays.asList((Object[])var1);
++         return Arrays.asList((T[]) var1);
+       }
+    }
+ 

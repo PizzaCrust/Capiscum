@@ -1,0 +1,13 @@
+diff --git a/net/minecraft/entity/EntityList.java b/net/minecraft/entity/EntityList.java
+index b4e085a..3f5ac8a 100644
+--- a/net/minecraft/entity/EntityList.java
++++ b/net/minecraft/entity/EntityList.java
+@@ -319,7 +319,7 @@
+          KNOWN_TYPES.add(var4);
+ 
+          while(OLD_NAMES.size() <= var0) {
+-            OLD_NAMES.add((Object)null);
++            OLD_NAMES.add((String) null);
+          }
+ 
+          OLD_NAMES.set(var0, var3);

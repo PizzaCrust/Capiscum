@@ -1,0 +1,14 @@
+diff --git a/net/minecraft/entity/boss/EntityDragon.java b/net/minecraft/entity/boss/EntityDragon.java
+index dc9887a..65fb399 100644
+--- a/net/minecraft/entity/boss/EntityDragon.java
++++ b/net/minecraft/entity/boss/EntityDragon.java
+@@ -346,7 +346,8 @@
+       }
+ 
+       if(this.rand.nextInt(10) == 0) {
+-         List var1 = this.world.getEntitiesWithinAABB(EntityEnderCrystal.class, this.getEntityBoundingBox().expandXyz(32.0D));
++         List<EntityEnderCrystal> var1 = this.world.getEntitiesWithinAABB(EntityEnderCrystal.class, this
++                 .getEntityBoundingBox().expandXyz(32.0D));
+          EntityEnderCrystal var2 = null;
+          double var3 = Double.MAX_VALUE;
+ 

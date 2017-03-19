@@ -1,0 +1,22 @@
+diff --git a/net/minecraft/scoreboard/ServerScoreboard.java b/net/minecraft/scoreboard/ServerScoreboard.java
+index 53d05e8..ede98e7 100644
+--- a/net/minecraft/scoreboard/ServerScoreboard.java
++++ b/net/minecraft/scoreboard/ServerScoreboard.java
+@@ -158,7 +158,7 @@
+    }
+ 
+    public void addObjective(ScoreObjective var1) {
+-      List var2 = this.getCreatePackets(var1);
++      List<Packet<?>> var2 = this.getCreatePackets(var1);
+ 
+       for(EntityPlayerMP var4 : this.scoreboardMCServer.getPlayerList().getPlayers()) {
+          for(Packet var6 : var2) {
+@@ -183,7 +183,7 @@
+    }
+ 
+    public void sendDisplaySlotRemovalPackets(ScoreObjective var1) {
+-      List var2 = this.getDestroyPackets(var1);
++      List<Packet<?>> var2 = this.getDestroyPackets(var1);
+ 
+       for(EntityPlayerMP var4 : this.scoreboardMCServer.getPlayerList().getPlayers()) {
+          for(Packet var6 : var2) {

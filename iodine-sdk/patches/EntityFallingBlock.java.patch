@@ -1,0 +1,15 @@
+diff --git a/net/minecraft/entity/item/EntityFallingBlock.java b/net/minecraft/entity/item/EntityFallingBlock.java
+index 67d6a66..c1f7276 100644
+--- a/net/minecraft/entity/item/EntityFallingBlock.java
++++ b/net/minecraft/entity/item/EntityFallingBlock.java
+@@ -160,7 +160,9 @@
+       if(this.hurtEntities) {
+          int var4 = MathHelper.ceil(var1 - 1.0F);
+          if(var4 > 0) {
+-            ArrayList var5 = Lists.newArrayList(this.world.getEntitiesWithinAABBExcludingEntity(this, this.getEntityBoundingBox()));
++            ArrayList<Entity> var5 = Lists.newArrayList(this.world
++                    .getEntitiesWithinAABBExcludingEntity
++                    (this, this.getEntityBoundingBox()));
+             boolean var6 = var3 == Blocks.ANVIL;
+             DamageSource var7 = var6?DamageSource.ANVIL:DamageSource.FALLING_BLOCK;
+ 

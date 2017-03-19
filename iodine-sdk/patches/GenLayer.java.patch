@@ -1,0 +1,13 @@
+diff --git a/net/minecraft/world/gen/layer/GenLayer.java b/net/minecraft/world/gen/layer/GenLayer.java
+index 3d162c6..6689870 100644
+--- a/net/minecraft/world/gen/layer/GenLayer.java
++++ b/net/minecraft/world/gen/layer/GenLayer.java
+@@ -67,7 +67,7 @@
+       GenLayer var35 = GenLayerZoom.magnify(1000L, var8, 2);
+       GenLayerBiomeEdge var36 = new GenLayerBiomeEdge(1000L, var35);
+       GenLayer var9 = GenLayerZoom.magnify(1000L, var30, 2);
+-      GenLayerHills var37 = new GenLayerHills(1000L, var36, var9);
++      GenLayer var37 = new GenLayerHills(1000L, var36, var9);
+       GenLayer var31 = GenLayerZoom.magnify(1000L, var30, 2);
+       var31 = GenLayerZoom.magnify(1000L, var31, var6);
+       GenLayerRiver var33 = new GenLayerRiver(1L, var31);
