@@ -1,4 +1,4 @@
-package capsicum.api;
+package capiscum.api;
 
 /**
  * Represents a instance of a Minecraft Server.
