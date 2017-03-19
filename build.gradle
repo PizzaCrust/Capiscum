@@ -30,7 +30,7 @@ task genPatches(type: Exec) {
 
 task applyPatches(type: Exec) {
     group = 'iodine'
-    commandLine 'java', 'jar', "buildtools/iodine.jar", "--apatch"
+    commandLine 'java', '-jar', "buildtools/iodine.jar", "--apatch"
 }
 
 project(":iodine-sdk") {
