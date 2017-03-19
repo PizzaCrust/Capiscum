@@ -4,6 +4,6 @@ public interface Chunk {
 
     int getX();
 
-    int getY();
+    int getZ();
 
 }

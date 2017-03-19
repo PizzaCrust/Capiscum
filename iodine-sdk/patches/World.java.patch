@@ -1,8 +1,28 @@
 diff --git a/net/minecraft/world/World.java b/net/minecraft/world/World.java
-index 25b2a32..68512db 100644
+index 25b2a32..874bcd6 100644
 --- a/net/minecraft/world/World.java
 +++ b/net/minecraft/world/World.java
-@@ -1983,7 +1983,7 @@
+@@ -70,6 +70,8 @@
+ import net.minecraft.world.storage.WorldInfo;
+ import net.minecraft.world.storage.loot.LootTableManager;
+ 
++import capiscum.impl.world.NMSWorld;
++
+ public abstract class World implements IBlockAccess {
+    private int seaLevel = 63;
+    protected boolean scheduledUpdatesAreImmediate;
+@@ -125,6 +127,10 @@
+       this.provider = var3;
+       this.isRemote = var5;
+       this.worldBorder = var3.createWorldBorder();
++   }
++
++   public NMSWorld getAbstraction() {
++      return new NMSWorld(this);
+    }
+ 
+    public World init() {
+@@ -1983,7 +1989,7 @@
        ArrayList var3 = Lists.newArrayList();
  
        for(Entity var5 : this.loadedEntityList) {
@@ -11,7 +31,7 @@ index 25b2a32..68512db 100644
              var3.add(var5);
           }
        }
-@@ -1995,7 +1995,7 @@
+@@ -1995,7 +2001,7 @@
        ArrayList var3 = Lists.newArrayList();
  
        for(Entity var5 : this.playerEntities) {
