@@ -13,7 +13,7 @@ public class NMSWorld implements World {
     }
 
     @Override
-    public Chunk getChunk(int x, int z) {
+    public Chunk getChunkAt(int x, int z) {
         return new NMSChunk(world.getChunkFromChunkCoords(x, z));
     }
 

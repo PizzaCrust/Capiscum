@@ -1,0 +1,15 @@
+diff --git a/net/minecraft/block/Block.java b/net/minecraft/block/Block.java
+index ef53acd..a5340df 100644
+--- a/net/minecraft/block/Block.java
++++ b/net/minecraft/block/Block.java
+@@ -673,6 +673,10 @@
+       return "tile." + this.unlocalizedName;
+    }
+ 
++   public String getTrueUnlocalizedName() {
++      return this.unlocalizedName;
++   }
++
+    @Deprecated
+    public boolean eventReceived(IBlockState var1, World var2, BlockPos var3, int var4, int var5) {
+       return false;

@@ -1,6 +1,11 @@
 package capiscum.impl.world;
 
 import capiscum.api.world.Chunk;
+import capiscum.api.world.World;
+import capiscum.api.world.block.BlockLocation;
+import capiscum.api.world.block.BlockMaterial;
+import capiscum.impl.ValueConverter;
+import capiscum.impl.world.block.NMSBlockMaterial;
 
 public class NMSChunk implements Chunk {
 
@@ -18,6 +23,16 @@ public class NMSChunk implements Chunk {
     @Override
     public int getZ() {
         return chunk.zPosition;
+    }
+
+    @Override
+    public BlockMaterial getBlockAt(BlockLocation blockLocation) {
+        return new NMSBlockMaterial(chunk.getBlockState(ValueConverter.fromLocation(blockLocation)).getBlock());
+    }
+
+    @Override
+    public World getWorld() {
+        return new NMSWorld(chunk.getWorld());
     }
 
 }
