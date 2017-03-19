@@ -13,8 +13,21 @@ repositories {
     mavenCentral()
 }
 
+sourceSets {
+    api {
+        java {
+            srcDir 'src/api/java'
+        }
+        resources {
+            srcDir 'src/api/resources'
+        }
+        compileClasspath += sourceSets.main.runtimeClasspath
+    }
+}
+
 dependencies {
     compile project(':iodine-sdk')
+    //compile api
 }
 
 task setupIodine(type: Exec) {
