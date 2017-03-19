@@ -38,7 +38,9 @@ public class Types {
      * @return
      */
     private static ConstantMapValue<String> createStringDelegation(String string) {
-        return new ConstantMapValue<>(IMPLEMENTATION_MAP, Component.createStringComponent(string));
+        return new ConstantMapValue<>(IMPLEMENTATION_MAP, ImmutableComponent.immutableOf(Component
+                .createStringComponent
+                (string)));
     }
 
     /**
