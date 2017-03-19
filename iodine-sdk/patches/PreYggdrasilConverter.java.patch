@@ -1,0 +1,22 @@
+diff --git a/net/minecraft/server/management/PreYggdrasilConverter.java b/net/minecraft/server/management/PreYggdrasilConverter.java
+index 61a209f..2501dff 100644
+--- a/net/minecraft/server/management/PreYggdrasilConverter.java
++++ b/net/minecraft/server/management/PreYggdrasilConverter.java
+@@ -49,7 +49,7 @@
+    public static final File OLD_WHITELIST_FILE = new File("white-list.txt");
+ 
+    static List<String> readFile(File var0, Map<String, String[]> var1) throws IOException {
+-      List var2 = Files.readLines(var0, Charsets.UTF_8);
++      List<String> var2 = Files.readLines(var0, Charsets.UTF_8);
+ 
+       for(String var4 : var2) {
+          var4 = var4.trim();
+@@ -145,7 +145,7 @@
+          }
+ 
+          try {
+-            HashMap var2 = Maps.newHashMap();
++            HashMap<String, String[]> var2 = Maps.newHashMap();
+             readFile(OLD_IPBAN_FILE, var2);
+ 
+             for(String var4 : var2.keySet()) {

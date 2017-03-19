@@ -1,0 +1,15 @@
+diff --git a/net/minecraft/entity/EntityLeashKnot.java b/net/minecraft/entity/EntityLeashKnot.java
+index 12b29a7..0a593aa 100644
+--- a/net/minecraft/entity/EntityLeashKnot.java
++++ b/net/minecraft/entity/EntityLeashKnot.java
+@@ -76,7 +76,9 @@
+       } else {
+          boolean var3 = false;
+          double var4 = 7.0D;
+-         List var6 = this.world.getEntitiesWithinAABB(EntityLiving.class, new AxisAlignedBB(this.posX - 7.0D, this.posY - 7.0D, this.posZ - 7.0D, this.posX + 7.0D, this.posY + 7.0D, this.posZ + 7.0D));
++         List<EntityLiving> var6 = this.world.getEntitiesWithinAABB(EntityLiving.class, new
++                 AxisAlignedBB
++                 (this.posX - 7.0D, this.posY - 7.0D, this.posZ - 7.0D, this.posX + 7.0D, this.posY + 7.0D, this.posZ + 7.0D));
+ 
+          for(EntityLiving var8 : var6) {
+             if(var8.getLeashed() && var8.getLeashedToEntity() == var1) {

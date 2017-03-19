@@ -1,0 +1,27 @@
+diff --git a/net/minecraft/server/dedicated/DedicatedServer.java b/net/minecraft/server/dedicated/DedicatedServer.java
+index 2f822b1..79b2c93 100644
+--- a/net/minecraft/server/dedicated/DedicatedServer.java
++++ b/net/minecraft/server/dedicated/DedicatedServer.java
+@@ -79,7 +79,7 @@
+       };
+    }
+ 
+-   protected boolean init() throws IOException {
++   public boolean init() throws IOException {
+       Thread var1 = new Thread("Server console handler") {
+          public void run() {
+             BufferedReader var1 = new BufferedReader(new InputStreamReader(System.in));
+@@ -299,11 +299,11 @@
+       return var1;
+    }
+ 
+-   protected void systemExitNow() {
++   public void systemExitNow() {
+       System.exit(0);
+    }
+ 
+-   protected void updateTimeLightAndEntities() {
++   public void updateTimeLightAndEntities() {
+       super.updateTimeLightAndEntities();
+       this.executePendingCommands();
+    }

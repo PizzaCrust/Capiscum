@@ -1,8 +1,21 @@
 diff --git a/net/minecraft/nbt/NBTUtil.java b/net/minecraft/nbt/NBTUtil.java
-index 47bbb5e..9e42fbb 100644
+index 47bbb5e..633843c 100644
 --- a/net/minecraft/nbt/NBTUtil.java
 +++ b/net/minecraft/nbt/NBTUtil.java
-@@ -218,6 +218,6 @@
+@@ -195,8 +195,10 @@
+       }
+    }
+ 
+-   private static <T extends Comparable<T>> IBlockState setValueHelper(IBlockState var0, IProperty<T> var1, String var2) {
+-      return var0.withProperty(var1, (Comparable)var1.parseValue(var2).get());
++   private static <T extends Comparable<T>> IBlockState setValueHelper(IBlockState var0,
++                                                                       IProperty<T> var1, String
++                                                                               var2) {
++      return var0.withProperty(var1, var1.parseValue(var2).get());
+    }
+ 
+    public static NBTTagCompound writeBlockState(NBTTagCompound var0, IBlockState var1) {
+@@ -218,6 +220,6 @@
     }
  
     private static <T extends Comparable<T>> String getName(IProperty<T> var0, Comparable<?> var1) {

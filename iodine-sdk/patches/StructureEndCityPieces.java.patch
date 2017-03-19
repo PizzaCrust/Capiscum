@@ -1,0 +1,13 @@
+diff --git a/net/minecraft/world/gen/structure/StructureEndCityPieces.java b/net/minecraft/world/gen/structure/StructureEndCityPieces.java
+index f7a1a7a..cfe71dc 100644
+--- a/net/minecraft/world/gen/structure/StructureEndCityPieces.java
++++ b/net/minecraft/world/gen/structure/StructureEndCityPieces.java
+@@ -197,7 +197,7 @@
+       if(var2 > 8) {
+          return false;
+       } else {
+-         ArrayList var7 = Lists.newArrayList();
++         ArrayList<StructureComponent> var7 = Lists.newArrayList();
+          if(var1.generate(var0, var2, var3, var4, var7, var6)) {
+             boolean var8 = false;
+             int var9 = var6.nextInt();

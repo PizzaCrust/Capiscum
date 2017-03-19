@@ -1,5 +1,5 @@
 diff --git a/net/minecraft/entity/monster/EntityEvoker.java b/net/minecraft/entity/monster/EntityEvoker.java
-index 44365a1..6880896 100644
+index 44365a1..7a4a874 100644
 --- a/net/minecraft/entity/monster/EntityEvoker.java
 +++ b/net/minecraft/entity/monster/EntityEvoker.java
 @@ -176,7 +176,7 @@
@@ -11,3 +11,21 @@ index 44365a1..6880896 100644
        }
  
        protected int getCastingTime() {
+@@ -285,7 +285,7 @@
+ 
+    class AISummonSpell extends EntityEvoker.AIUseSpell {
+       private AISummonSpell() {
+-         super(null);
++         super();
+       }
+ 
+       public boolean shouldExecute() {
+@@ -383,7 +383,7 @@
+       };
+ 
+       public AIWololoSpell() {
+-         super(null);
++         super();
+       }
+ 
+       public boolean shouldExecute() {

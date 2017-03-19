@@ -1,8 +1,18 @@
 diff --git a/net/minecraft/entity/projectile/EntityPotion.java b/net/minecraft/entity/projectile/EntityPotion.java
-index 44b6a56..4ba0517 100644
+index 44b6a56..d1c0d7b 100644
 --- a/net/minecraft/entity/projectile/EntityPotion.java
 +++ b/net/minecraft/entity/projectile/EntityPotion.java
-@@ -131,7 +131,7 @@
+@@ -117,7 +117,8 @@
+ 
+    private void applyWater() {
+       AxisAlignedBB var1 = this.getEntityBoundingBox().expand(4.0D, 2.0D, 4.0D);
+-      List var2 = this.world.getEntitiesWithinAABB(EntityLivingBase.class, var1, WATER_SENSITIVE);
++      List<EntityLivingBase> var2 = this.world.getEntitiesWithinAABB(EntityLivingBase.class, var1,
++              WATER_SENSITIVE);
+       if(!var2.isEmpty()) {
+          for(EntityLivingBase var4 : var2) {
+             double var5 = this.getDistanceSqToEntity(var4);
+@@ -131,7 +132,7 @@
  
     private void applySplash(RayTraceResult var1, List<PotionEffect> var2) {
        AxisAlignedBB var3 = this.getEntityBoundingBox().expand(4.0D, 2.0D, 4.0D);

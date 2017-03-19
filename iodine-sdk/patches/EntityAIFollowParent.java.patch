@@ -1,0 +1,15 @@
+diff --git a/net/minecraft/entity/ai/EntityAIFollowParent.java b/net/minecraft/entity/ai/EntityAIFollowParent.java
+index 7d6f4b0..ceb1bda 100644
+--- a/net/minecraft/entity/ai/EntityAIFollowParent.java
++++ b/net/minecraft/entity/ai/EntityAIFollowParent.java
+@@ -19,7 +19,9 @@
+       if(this.childAnimal.getGrowingAge() >= 0) {
+          return false;
+       } else {
+-         List var1 = this.childAnimal.world.getEntitiesWithinAABB(this.childAnimal.getClass(), this.childAnimal.getEntityBoundingBox().expand(8.0D, 4.0D, 8.0D));
++         List<EntityAnimal> var1 = this.childAnimal.world.getEntitiesWithinAABB(this.childAnimal
++                         .getClass(),
++                 this.childAnimal.getEntityBoundingBox().expand(8.0D, 4.0D, 8.0D));
+          EntityAnimal var2 = null;
+          double var3 = Double.MAX_VALUE;
+ 

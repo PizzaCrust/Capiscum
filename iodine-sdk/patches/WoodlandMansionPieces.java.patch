@@ -1,0 +1,40 @@
+diff --git a/net/minecraft/world/gen/structure/WoodlandMansionPieces.java b/net/minecraft/world/gen/structure/WoodlandMansionPieces.java
+index b368729..715a8ae 100644
+--- a/net/minecraft/world/gen/structure/WoodlandMansionPieces.java
++++ b/net/minecraft/world/gen/structure/WoodlandMansionPieces.java
+@@ -42,7 +42,7 @@
+ 
+    static class FirstFloor extends WoodlandMansionPieces.RoomCollection {
+       private FirstFloor() {
+-         super(null);
++         super();
+       }
+ 
+       public String get1x1(Random var1) {
+@@ -261,7 +261,7 @@
+       }
+ 
+       private void identifyRooms(WoodlandMansionPieces.SimpleGrid var1, WoodlandMansionPieces.SimpleGrid var2) {
+-         ArrayList var3 = Lists.newArrayList();
++         ArrayList<Tuple> var3 = Lists.newArrayList();
+ 
+          for(int var4 = 0; var4 < var1.height; ++var4) {
+             for(int var5 = 0; var5 < var1.width; ++var5) {
+@@ -944,7 +944,7 @@
+ 
+    static class SecondFloor extends WoodlandMansionPieces.RoomCollection {
+       private SecondFloor() {
+-         super(null);
++         super();
+       }
+ 
+       public String get1x1(Random var1) {
+@@ -1023,7 +1023,7 @@
+ 
+    static class ThirdFloor extends WoodlandMansionPieces.SecondFloor {
+       private ThirdFloor() {
+-         super(null);
++         super();
+       }
+    }
+ }

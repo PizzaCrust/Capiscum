@@ -1,0 +1,14 @@
+diff --git a/net/minecraft/world/gen/structure/StructureComponentTemplate.java b/net/minecraft/world/gen/structure/StructureComponentTemplate.java
+index 0159cce..927d34d 100644
+--- a/net/minecraft/world/gen/structure/StructureComponentTemplate.java
++++ b/net/minecraft/world/gen/structure/StructureComponentTemplate.java
+@@ -52,7 +52,8 @@
+    public boolean addComponentParts(World var1, Random var2, StructureBoundingBox var3) {
+       this.placeSettings.setBoundingBox(var3);
+       this.template.addBlocksToWorld(var1, this.templatePosition, this.placeSettings, 18);
+-      Map var4 = this.template.getDataBlocks(this.templatePosition, this.placeSettings);
++      Map<BlockPos, String> var4 = this.template.getDataBlocks(this.templatePosition, this
++              .placeSettings);
+ 
+       for(Entry var6 : var4.entrySet()) {
+          String var7 = (String)var6.getValue();

@@ -1,0 +1,13 @@
+diff --git a/net/minecraft/stats/StatList.java b/net/minecraft/stats/StatList.java
+index 93a8ea1..60b7fe2 100644
+--- a/net/minecraft/stats/StatList.java
++++ b/net/minecraft/stats/StatList.java
+@@ -129,7 +129,7 @@
+    }
+ 
+    private static void initCraftableStats() {
+-      HashSet var0 = Sets.newHashSet();
++      HashSet<Item> var0 = Sets.newHashSet();
+ 
+       for(IRecipe var2 : CraftingManager.getInstance().getRecipeList()) {
+          ItemStack var3 = var2.getRecipeOutput();

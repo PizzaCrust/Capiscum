@@ -1,5 +1,5 @@
 diff --git a/net/minecraft/pathfinding/WalkNodeProcessor.java b/net/minecraft/pathfinding/WalkNodeProcessor.java
-index 6cd9606..3f3a109 100644
+index 6cd9606..5610d1c 100644
 --- a/net/minecraft/pathfinding/WalkNodeProcessor.java
 +++ b/net/minecraft/pathfinding/WalkNodeProcessor.java
 @@ -63,7 +63,7 @@
@@ -11,3 +11,12 @@ index 6cd9606..3f3a109 100644
           var4.add(new BlockPos(this.entity.getEntityBoundingBox().minX, (double)var1, this.entity.getEntityBoundingBox().minZ));
           var4.add(new BlockPos(this.entity.getEntityBoundingBox().minX, (double)var1, this.entity.getEntityBoundingBox().maxZ));
           var4.add(new BlockPos(this.entity.getEntityBoundingBox().maxX, (double)var1, this.entity.getEntityBoundingBox().minZ));
+@@ -229,7 +229,7 @@
+    }
+ 
+    public PathNodeType getPathNodeType(IBlockAccess var1, int var2, int var3, int var4, EntityLiving var5, int var6, int var7, int var8, boolean var9, boolean var10) {
+-      EnumSet var11 = EnumSet.noneOf(PathNodeType.class);
++      EnumSet<PathNodeType> var11 = EnumSet.noneOf(PathNodeType.class);
+       PathNodeType var12 = PathNodeType.BLOCKED;
+       double var13 = (double)var5.width / 2.0D;
+       BlockPos var15 = new BlockPos(var5);

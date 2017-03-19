@@ -1,0 +1,13 @@
+diff --git a/net/minecraft/world/storage/loot/conditions/EntityHasScore.java b/net/minecraft/world/storage/loot/conditions/EntityHasScore.java
+index cb9c3c4..a753d92 100644
+--- a/net/minecraft/world/storage/loot/conditions/EntityHasScore.java
++++ b/net/minecraft/world/storage/loot/conditions/EntityHasScore.java
+@@ -73,7 +73,7 @@
+       }
+ 
+       public EntityHasScore deserialize(JsonObject var1, JsonDeserializationContext var2) {
+-         Set var3 = JsonUtils.getJsonObject(var1, "scores").entrySet();
++         Set<Entry<String, JsonElement>> var3 = JsonUtils.getJsonObject(var1, "scores").entrySet();
+          LinkedHashMap var4 = Maps.newLinkedHashMap();
+ 
+          for(Entry var6 : var3) {

@@ -1,0 +1,13 @@
+diff --git a/net/minecraft/server/network/NetHandlerLoginServer.java b/net/minecraft/server/network/NetHandlerLoginServer.java
+index 1df948e..517d29b 100644
+--- a/net/minecraft/server/network/NetHandlerLoginServer.java
++++ b/net/minecraft/server/network/NetHandlerLoginServer.java
+@@ -150,7 +150,7 @@
+ 
+                try {
+                   String var2 = (new BigInteger(CryptManager.getServerIdHash("", NetHandlerLoginServer.this.server.getKeyPair().getPublic(), NetHandlerLoginServer.this.secretKey))).toString(16);
+-                  NetHandlerLoginServer.this.loginGameProfile = NetHandlerLoginServer.this.server.getMinecraftSessionService().hasJoinedServer(new GameProfile((UUID)null, var1.getName()), var2, this.getAddress());
++                  NetHandlerLoginServer.this.loginGameProfile = NetHandlerLoginServer.this.server.getMinecraftSessionService().hasJoinedServer(new GameProfile(null, var1.getName()), var2);
+                   if(NetHandlerLoginServer.this.loginGameProfile != null) {
+                      NetHandlerLoginServer.LOGGER.info("UUID of player {} is {}", new Object[]{NetHandlerLoginServer.this.loginGameProfile.getName(), NetHandlerLoginServer.this.loginGameProfile.getId()});
+                      NetHandlerLoginServer.this.currentLoginState = NetHandlerLoginServer.LoginState.READY_TO_ACCEPT;

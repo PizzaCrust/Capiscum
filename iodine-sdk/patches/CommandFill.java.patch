@@ -1,0 +1,13 @@
+diff --git a/net/minecraft/command/CommandFill.java b/net/minecraft/command/CommandFill.java
+index 850831d..8bf0719 100644
+--- a/net/minecraft/command/CommandFill.java
++++ b/net/minecraft/command/CommandFill.java
+@@ -82,7 +82,7 @@
+                }
+             }
+ 
+-            ArrayList var25 = Lists.newArrayList();
++            ArrayList<BlockPos> var25 = Lists.newArrayList();
+             var10 = 0;
+ 
+             for(int var15 = var8.getZ(); var15 <= var9.getZ(); ++var15) {

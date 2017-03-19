@@ -1,0 +1,13 @@
+diff --git a/net/minecraft/world/chunk/storage/AnvilChunkLoader.java b/net/minecraft/world/chunk/storage/AnvilChunkLoader.java
+index d8e5653..2f0ab96 100644
+--- a/net/minecraft/world/chunk/storage/AnvilChunkLoader.java
++++ b/net/minecraft/world/chunk/storage/AnvilChunkLoader.java
+@@ -265,7 +265,7 @@
+       }
+ 
+       var3.setTag("TileEntities", var19);
+-      List var22 = var2.getPendingBlockUpdates(var1, false);
++      List<NextTickListEntry> var22 = var2.getPendingBlockUpdates(var1, false);
+       if(var22 != null) {
+          long var25 = var2.getTotalWorldTime();
+          NBTTagList var28 = new NBTTagList();

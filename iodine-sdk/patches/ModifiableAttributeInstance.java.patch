@@ -1,0 +1,13 @@
+diff --git a/net/minecraft/entity/ai/attributes/ModifiableAttributeInstance.java b/net/minecraft/entity/ai/attributes/ModifiableAttributeInstance.java
+index e22f9a9..cd2a807 100644
+--- a/net/minecraft/entity/ai/attributes/ModifiableAttributeInstance.java
++++ b/net/minecraft/entity/ai/attributes/ModifiableAttributeInstance.java
+@@ -76,7 +76,7 @@
+       if(this.getModifier(var1.getID()) != null) {
+          throw new IllegalArgumentException("Modifier is already applied on this attribute!");
+       } else {
+-         Object var2 = (Set)this.mapByName.get(var1.getName());
++         Set<AttributeModifier> var2 = (Set)this.mapByName.get(var1.getName());
+          if(var2 == null) {
+             var2 = Sets.newHashSet();
+             this.mapByName.put(var1.getName(), var2);

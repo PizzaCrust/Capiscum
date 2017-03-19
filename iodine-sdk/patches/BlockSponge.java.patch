@@ -1,0 +1,13 @@
+diff --git a/net/minecraft/block/BlockSponge.java b/net/minecraft/block/BlockSponge.java
+index f7f0541..fa04e1c 100644
+--- a/net/minecraft/block/BlockSponge.java
++++ b/net/minecraft/block/BlockSponge.java
+@@ -53,7 +53,7 @@
+ 
+    private boolean absorb(World var1, BlockPos var2) {
+       LinkedList var3 = Lists.newLinkedList();
+-      ArrayList var4 = Lists.newArrayList();
++      ArrayList<BlockPos> var4 = Lists.newArrayList();
+       var3.add(new Tuple(var2, Integer.valueOf(0)));
+       int var5 = 0;
+ 

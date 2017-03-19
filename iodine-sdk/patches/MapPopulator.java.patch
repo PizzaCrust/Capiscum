@@ -1,0 +1,13 @@
+diff --git a/net/minecraft/util/MapPopulator.java b/net/minecraft/util/MapPopulator.java
+index 8ba2108..69f84e7 100644
+--- a/net/minecraft/util/MapPopulator.java
++++ b/net/minecraft/util/MapPopulator.java
+@@ -14,7 +14,7 @@
+       Iterator var3 = var1.iterator();
+ 
+       for(Object var5 : var0) {
+-         var2.put(var5, var3.next());
++         var2.put((K)var5, (V)var3.next());
+       }
+ 
+       if(var3.hasNext()) {

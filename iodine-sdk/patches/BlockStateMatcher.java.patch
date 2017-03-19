@@ -1,0 +1,14 @@
+diff --git a/net/minecraft/block/state/pattern/BlockStateMatcher.java b/net/minecraft/block/state/pattern/BlockStateMatcher.java
+index f34256a..4a2b168 100644
+--- a/net/minecraft/block/state/pattern/BlockStateMatcher.java
++++ b/net/minecraft/block/state/pattern/BlockStateMatcher.java
+@@ -41,7 +41,8 @@
+       }
+    }
+ 
+-   protected <T extends Comparable<T>> boolean matches(IBlockState var1, IProperty<T> var2, Predicate<?> var3) {
++   protected <T extends Comparable<T>> boolean matches(IBlockState var1, IProperty<T> var2,
++                                                       Predicate<T> var3) {
+       return var3.apply(var1.getValue(var2));
+    }
+ 

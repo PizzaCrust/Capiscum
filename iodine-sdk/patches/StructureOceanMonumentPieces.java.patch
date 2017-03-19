@@ -1,0 +1,22 @@
+diff --git a/net/minecraft/world/gen/structure/StructureOceanMonumentPieces.java b/net/minecraft/world/gen/structure/StructureOceanMonumentPieces.java
+index f2a92f7..3943425 100644
+--- a/net/minecraft/world/gen/structure/StructureOceanMonumentPieces.java
++++ b/net/minecraft/world/gen/structure/StructureOceanMonumentPieces.java
+@@ -577,7 +577,7 @@
+             this.boundingBox = new StructureBoundingBox(var2, 39, var3, var2 + 58 - 1, 61, var3 + 58 - 1);
+          }
+ 
+-         List var6 = this.generateRoomGraph(var1);
++         List<StructureOceanMonumentPieces.RoomDefinition> var6 = this.generateRoomGraph(var1);
+          this.sourceRoom.claimed = true;
+          this.childPieces.add(new StructureOceanMonumentPieces.EntryRoom(var5, this.sourceRoom));
+          this.childPieces.add(new StructureOceanMonumentPieces.MonumentCoreRoom(var5, this.coreRoom, var1));
+@@ -701,7 +701,7 @@
+          this.coreRoom.connections[EnumFacing.EAST.getIndex()].connections[EnumFacing.UP.getIndex()].claimed = true;
+          this.coreRoom.connections[EnumFacing.NORTH.getIndex()].connections[EnumFacing.UP.getIndex()].claimed = true;
+          this.coreRoom.connections[EnumFacing.EAST.getIndex()].connections[EnumFacing.NORTH.getIndex()].connections[EnumFacing.UP.getIndex()].claimed = true;
+-         ArrayList var30 = Lists.newArrayList();
++         ArrayList<StructureOceanMonumentPieces.RoomDefinition> var30 = Lists.newArrayList();
+ 
+          for(StructureOceanMonumentPieces.RoomDefinition var37 : var2) {
+             if(var37 != null) {

@@ -1,0 +1,13 @@
+diff --git a/net/minecraft/util/LowerStringMap.java b/net/minecraft/util/LowerStringMap.java
+index c8a490f..1db856e 100644
+--- a/net/minecraft/util/LowerStringMap.java
++++ b/net/minecraft/util/LowerStringMap.java
+@@ -43,7 +43,7 @@
+ 
+    public void putAll(Map<? extends String, ? extends V> var1) {
+       for(Entry var3 : var1.entrySet()) {
+-         this.put((String)var3.getKey(), var3.getValue());
++         this.put((String)var3.getKey(), (V) var3.getValue());
+       }
+ 
+    }
