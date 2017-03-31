@@ -14,7 +14,9 @@ repositories {
 }
 
 dependencies {
-    compile project(':iodine-sdk')
+    if (project.file("iodine-sdk/build.gradle").exists()) {
+        compile project(':iodine-sdk')
+    }
 }
 
 task setupIodine(type: Exec) {
@@ -33,6 +35,8 @@ task applyPatches(type: Exec) {
     commandLine 'java', '-jar', "buildtools/iodine.jar", "--apatch"
 }
 
-project(":iodine-sdk") {
-    apply from: rootProject.file('iodine-sdk/build.gradle')
+if (project.file("iodine-sdk/build.gradle").exists()) {
+    project(":iodine-sdk") {
+        apply from: rootProject.file('iodine-sdk/build.gradle')
+    }
 }
